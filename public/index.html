@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise Tracker</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="An Exercise Tracker Project">
+        <meta name="keywords" content="Node, Express, Mongoose, Exercise Tracker">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div id="container">
+            <header role="banner">
+                <h1>Exercise Tracker</h1>
+            </header>
+    
+            <main role="main">
+                <article>
+                    <form id="create-new-user" action="/api/exercise/new-user" method="post">
+                        <label id="new-user-label" for="newUser"><code>POST /api/exercise/new-user</code></label>
+                        <input name="username" id="newUser" placeholder="username*" class="form-input" required>
+                        <input type="submit" id="submit" value="Create New User">
+                    </form>
+                </article>
+
+                <article>
+                    <form id="add-exercise" action="/api/exercise/add" method="post">
+                            <label id="add-exercise-label" for="add-exercise"><code>POST /api/exercise/add</code></label>
+                            <input name="userId" id="add-exercise-user" placeholder="userId*" class="form-input" required>
+                            <input name="description" id="add-exercise-description" placeholder="description*" class="form-input" required>
+                            <input name="duration" id="add-exercise-duration" placeholder="duration* (mins)" class="form-input" required>
+                            <input name="date" id="add-exercise-date" placeholder="date (yyyy-mm-dd)" class="form-input">
+                            <input type="submit" id="submit" value="Add New Exercise">
+                    </form>
+                </article>
+
+                <article>
+                    <p><strong>GET users' exercise log: </strong><code>GET /api/exercise/log?{userId}[&from][&to][&limit]</code></p>
+                    <p><strong>{ }</strong> = required, <strong>[ ]</strong> = optional</p>
+                    <p><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
+                </article>
+            </main>
+    
+            <footer role="contentinfo">
+                <small>&copy; Copyright 2020, John D. Pham</small>
+            </footer>
+        </div>
+    </body>
+</html>
