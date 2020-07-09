@@ -17,7 +17,7 @@
     
             <main role="main">
                 <article>
-                    <form id="create-new-user" action="/api/exercise/new-user" method="post">
+                    <form id="create-new-user" action="/api/exercise/new-user" method="post" class="form-group">
                         <label id="new-user-label" for="newUser"><code>POST /api/exercise/new-user</code></label>
                         <input name="username" id="newUser" placeholder="username*" class="form-input" required>
                         <input type="submit" id="submit" value="Create New User">
@@ -25,7 +25,7 @@
                 </article>
 
                 <article>
-                    <form id="add-exercise" action="/api/exercise/add" method="post">
+                    <form id="add-exercise" action="/api/exercise/add" method="post" class="form-group">
                             <label id="add-exercise-label" for="add-exercise"><code>POST /api/exercise/add</code></label>
                             <input name="userId" id="add-exercise-user" placeholder="userId*" class="form-input" required>
                             <input name="description" id="add-exercise-description" placeholder="description*" class="form-input" required>
